@@ -9,6 +9,10 @@ import psycopg2
 
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 
+INSERT_MESSAGE_QUERY = "INSERT INTO memories (session_id, message) VALUES (%s, %s);"
+
+GET_HISTORY_QUERY = "SELECT message FROM memories WHERE session_id = %s ORDER BY created_at DESC LIMIT %s;"
+
 db_host = os.getenv("DB_HOST")
 db_port = os.getenv("DB_PORT")
 db_name = os.getenv("DB_NAME")
