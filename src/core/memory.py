@@ -63,7 +63,7 @@ class MemoryManager:
                     ) -> list:
         
         """
-        Retrieve the last 'limit' messages for a given session.
+        Retrieve the last limit messages for a given session.
         Returns a list of LangChain message objects.
         """
 
